@@ -174,7 +174,7 @@ bool EthernetWebServer::_parseRequest(EthernetClient& client)
   String methodStr  = req.substring(0, addr_start);
   String url        = req.substring(addr_start + 1, addr_end);
   String versionEnd = req.substring(addr_end + 8);
-  _currentVersion   = atoi(versionEnd.c_str());
+  _currentVersion   = 0;
   String searchStr  = "";
   int hasSearch     = url.indexOf('?');
 
